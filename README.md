@@ -44,4 +44,13 @@ City dataset files:
 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+- Programming for Data Science with Python Udacity Nanodegree Program documentation
+
+- pandas documentation:
+https://pandas.pydata.org/pandas-docs/stable/reference/index.html
+
+- to extract the existing months and days from data, and convert them into a list:
+https://www.geeksforgeeks.org/how-to-convert-pandas-dataframe-into-a-list/
+
+- to_string(): to remove Name and dtype from value_counts() output:
+https://stackoverflow.com/questions/53025207/how-do-i-remove-name-and-dtype-from-pandas-output
