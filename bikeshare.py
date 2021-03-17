@@ -126,17 +126,17 @@ def stations(df):
     """
     print('*'*30, '\nPOPULAR STATIONS AND TRIP: \n')
     #prints most popular start station and the number of times used
-    print('Most common start station: ', df['Start Station'].value_counts().index[0])
-    print('Number of times as start station: ', df['Start Station'].value_counts()[0])
+    print('Most common start station: {}'.format(df['Start Station'].value_counts().index[0]))
+    print('Number of times as start station: {}'.format(df['Start Station'].value_counts()[0]))
     print('-' * 30)
     #prints most popular end station and the number of times used
-    print('Most common end station: ', df['End Station'].value_counts().index[0])
-    print('Number of times as end station: ', df['End Station'].value_counts()[0])
+    print('Most common end station: {}'.format(df['End Station'].value_counts().index[0]))
+    print('Number of times as end station: {}'.format(df['End Station'].value_counts()[0]))
     print('-' * 30)
     #new trip column as aggregation of start station + to + end station
     df['Trip'] = df['Start Station'] + str(' to ') + df['End Station']
     #prints most common trip and the number of times ridden
-    print('The most common trip is: ', df['Trip'].value_counts().index[0])
+    print('The most common trip is: {}'.format(df['Trip'].value_counts().index[0]))
     print('which has been ridden {} times \n'.format(df['Trip'].value_counts()[0]))
 
 def trip(df):
