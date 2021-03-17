@@ -240,7 +240,7 @@ def raw_data(df):
 
 def main():
     """
-    This is the main function
+    Main function:
     It calls the other functions
     """
     while True:
