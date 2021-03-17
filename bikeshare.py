@@ -219,22 +219,16 @@ def raw_data(df):
 
     Returns: nothing
     """
-    #var rows is set at 0. it will be used as a line counter to print them
     rows = 0
     while True:
-        #the user is asked to print the first 5 lines of raw data
         print_rows = input('Would you like to print the first 5 lines of raw data? (y) (n)\n').lower()
         while print_rows == 'y':
-            #if user inputs 'y' the rows are printed. the user is asked to print the next 5 lines.
             print(df.iloc[rows:rows + 5])
-            #each iteration adds 5 to rows
             rows += 5
             print_rows = input('Continue with next 5 lines? (y) (n)\n').lower()
         if print_rows == 'n':
-            #if user inputs 'n' nothing more is printed
             break
         elif print_rows != 'n' and print_rows != 'y':
-            #when input is different from 'n' or 'y', the user is prompted to try again
             print('Try again')
 
 
