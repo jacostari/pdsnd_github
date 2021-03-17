@@ -3,7 +3,7 @@ Project:  2021-02-14
 README:   2021-03-16
 
 ### Project Title
-EXPLORE US BIKESHARE DATA
+EXPLORE US BIKESHARE DATA. Programming for Data Science with Python Udacity Nanodegree.
 
 ### Description
 This project uncovers bike share usage patterns in Chicago, New York City, and Washington by computing a variety of descriptive statistics.
