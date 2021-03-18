@@ -126,17 +126,17 @@ def stations(df):
     """
     print('*'*30, '\nPOPULAR STATIONS AND TRIP: \n')
     #prints most popular start station and the number of times used
-    print('Most common start station: ', df['Start Station'].value_counts().index[0])
-    print('Number of times as start station: ', df['Start Station'].value_counts()[0])
+    print('Most common start station: {}'.format(df['Start Station'].value_counts().index[0]))
+    print('Number of times as start station: {}'.format(df['Start Station'].value_counts()[0]))
     print('-' * 30)
     #prints most popular end station and the number of times used
-    print('Most common end station: ', df['End Station'].value_counts().index[0])
-    print('Number of times as end station: ', df['End Station'].value_counts()[0])
+    print('Most common end station: {}'.format(df['End Station'].value_counts().index[0]))
+    print('Number of times as end station: {}'.format(df['End Station'].value_counts()[0]))
     print('-' * 30)
     #new trip column as aggregation of start station + to + end station
     df['Trip'] = df['Start Station'] + str(' to ') + df['End Station']
     #prints most common trip and the number of times ridden
-    print('The most common trip is: ', df['Trip'].value_counts().index[0])
+    print('The most common trip is: {}'.format(df['Trip'].value_counts().index[0]))
     print('which has been ridden {} times \n'.format(df['Trip'].value_counts()[0]))
 
 def trip(df):
@@ -219,22 +219,16 @@ def raw_data(df):
 
     Returns: nothing
     """
-    #var rows is set at 0. it will be used as a line counter to print them
     rows = 0
     while True:
-        #the user is asked to print the first 5 lines of raw data
         print_rows = input('Would you like to print the first 5 lines of raw data? (y) (n)\n').lower()
         while print_rows == 'y':
-            #if user inputs 'y' the rows are printed. the user is asked to print the next 5 lines.
             print(df.iloc[rows:rows + 5])
-            #each iteration adds 5 to rows
             rows += 5
             print_rows = input('Continue with next 5 lines? (y) (n)\n').lower()
         if print_rows == 'n':
-            #if user inputs 'n' nothing more is printed
             break
         elif print_rows != 'n' and print_rows != 'y':
-            #when input is different from 'n' or 'y', the user is prompted to try again
             print('Try again')
 
 
